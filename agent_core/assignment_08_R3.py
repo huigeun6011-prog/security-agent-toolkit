@@ -1,0 +1,17 @@
+import time
+
+logs = [
+    {"time": "09:01", "user": "kim01", "event": "LOGIN_OK", "ip": "10.0.3.21"},
+    {"time": "09:05", "user": "admin", "event": "LOGIN_FAIL", "ip": "10.0.9.8"},
+    {"time": "09:12", "user": "admin", "event": "LOGIN_FAIL", "ip": "10.0.9.8"},
+    {"time": "09:18", "user": "lee02", "event": "LOGIN_FAIL", "ip": "10.0.7.5"},
+    {"time": "09:21", "user": "admin", "event": "LOGIN_FAIL", "ip": "10.0.9.8"},
+
+]
+
+count = 0
+for log in logs:
+    if log["event"] == "LOGIN_FAIL":
+        count += 1
+
+print(f'실패 {count}건')
