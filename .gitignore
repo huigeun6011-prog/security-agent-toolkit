@@ -1,3 +1,4 @@
 .env
 .venv/
-./access_control/__pycache__
+__pycache__/
+*.pyc
